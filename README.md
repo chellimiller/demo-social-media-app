@@ -1,17 +1,16 @@
-# Simple React App Template
+# Demo Social Media App
 
-Starter React app with TypeScript and several helpful dependencies.
+This is a basic demonstration of a social media app.
+It only runs in the browser and uses Faker and Dexie to create a mock API.
 
-This template is intended for prototype apps.
-With that said, it has a large amount of dependencies to get you off the ground quickly.
-
-This prototype comes with the following dependencies:
+This demo uses the following dependencies:
 
 - [Dexie][dexie] for persistent state management.
   - Dexie uses IndexedDB, so state is persisted.
   - Makes prototype development easier, since there may not be a backend at first.
   - Easily query the data.
   - Not ideal for theming, configuration, or page-specific state, so Redux is still included.
+- [Faker][faker] for mock data.
 - [clsx][clsx] for class name creation.
 - [Emotion][emotion] for UI components.
   - Allows you to easily design and style components.
@@ -26,12 +25,7 @@ This prototype comes with the following dependencies:
 - [Rimraf][rimraf] The UNIX command `rm -rf` for node.
 - [usehooks-ts][usehooks-ts] for useful hooks to help in a variety of situations.
 
-This template is ideal for prototypes,
-but includes more dependencies that are likely needed for your individual use case.
-It's a good idea to review these dependencies and remove any you find unnecessary.
-
-This template is quite restrictive to encourage good practices, even while prototyping.
-Feel free to remove these restrictions if you decide they are unnecessary.
+Many of these dependencies were included with the template used to create the repository.
 
 ## Structure
 
@@ -151,8 +145,6 @@ Before getting started, you will need [Git] and [Node.js].
 
 ### Instructions
 
-1. If you haven't already, [create a new GitHub repository from this template][generate].
-1. On your machine, open a terminal.
 1. Clone the repository you've created from the template.\
    Run `git clone <your-repository-url> <some-directory>`
 1. Navigate to the directory where you cloned the repository.\
@@ -165,6 +157,7 @@ Before getting started, you will need [Git] and [Node.js].
 You are now ready to start coding!
 
 [dexie]: https://dexie.org/
+[faker]: https://fakerjs.dev/
 [clsx]: https://www.npmjs.com/package/clsx
 [emotion]: https://emotion.sh/docs/introduction
 [floating-ui]: https://floating-ui.com/

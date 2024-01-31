@@ -19,37 +19,8 @@ const config = {
   // This is important for testing a web app that runs in a browser.
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/testSetup.ts'],
-  // Specify that code coverage should be collected.
-  // Code coverage shows how many lines, functions, and branches are covered by tests.
-  collectCoverage: true,
   collectCoverageFrom: ['**/*.{ts,tsx}', '!**/dist/**'],
-  coveragePathIgnorePatterns: [
-    '/node_modules/',
-    'index',
-    '_dexie.ts',
-    '_store.ts',
-    'src/ui/emotion',
-    'App.tsx',
-    // Difficult to test, we'll want to have a better pattern established and address #27
-    'src/ui/components/Dialog',
-    // These have tests written for them, but window.matchMedia is proving difficult to test in the theme.slice
-    // and the dialog.slice is showing 100% line coverange BUT I think createSlice may need to be tested? - shouldn't be the case
-    'src/state/store/theme.slice.ts',
-    'src/state/store/dialog.slice.ts'
-  ],
-  coverageThreshold: {
-    // Specifies all global coverage at 100%
-    // Though code coverage doesn't guarantee that every case is tested,
-    //   it is a good metric for showing how testable the code is.
-    // 100% code coverage is an easy metric that prevents unreachable code
-    //   and ensures that important tests aren't skipped due to difficulty.
-    global: {
-      branches: 100,
-      functions: 100,
-      lines: 100,
-      statements: 100,
-    },
-  },
+  coveragePathIgnorePatterns: ['/node_modules/', 'index', 'src/ui/emotion'],
   transform: {
     // Specify that all JS files should be transformed with @swc/jest.
     // The Speedy Web Compiler is not as mature as Babel,

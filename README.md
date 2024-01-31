@@ -161,7 +161,7 @@ You are now ready to start coding!
 [clsx]: https://www.npmjs.com/package/clsx
 [emotion]: https://emotion.sh/docs/introduction
 [floating-ui]: https://floating-ui.com/
-[generate]: https://github.com/utori-dev/template-react-app-prototype/generate
+[generate]: https://github.com/chellimiller/demo-social-media-app/generate
 [git]: https://git-scm.com/
 [github_docs_git]: https://docs.github.com/en/get-started/quickstart/set-up-git
 [lodash]: https://lodash.com/

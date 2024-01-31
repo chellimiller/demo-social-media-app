@@ -1,7 +1,7 @@
 {
-  "name": "@utori-dev/template-react-app-prototype",
+  "name": "@chellimiller/demo-social-media-app",
   "version": "1.0.0",
-  "description": "Starter web app with HTML, CSS, JavaScript, and development dependencies.",
+  "description": "Mock social media app that runs in the browser only.",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/utori-dev/template-react-app-prototype.git"
+    "url": "git+https://github.com/chellimiller/demo-social-media-app.git"
   },
   "keywords": [
     "html",
@@ -31,9 +31,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/utori-dev/template-react-app-prototype/issues"
+    "url": "https://github.com/chellimiller/demo-social-media-app/issues"
   },
-  "homepage": "https://github.com/utori-dev/template-react-app-prototype#readme",
+  "homepage": "https://github.com/chellimiller/demo-social-media-app#readme",
   "dependencies": {
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",

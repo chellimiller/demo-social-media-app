@@ -127,7 +127,7 @@ function App(): React.ReactElement | null {
           </p>
           <p>
             To learn more,{' '}
-            <a href="https://github.com/utori-dev/template-react-app-prototype">
+            <a href="https://github.com/chellimiller/demo-social-media-app">
               view the project on GitHub!
             </a>
           </p>

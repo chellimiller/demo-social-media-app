@@ -4,7 +4,7 @@ import { css } from '@emotion/react';
 import { Content, usePerson } from '../../../state';
 import { text } from '../../emotion';
 import Button from '../Button';
-import { InfoIcon } from '../../icons';
+import { CommentIcon, DownvoteIcon, InfoIcon, UpvoteIcon } from '../../icons';
 import UserLink from '../UserLink';
 
 /**
@@ -81,13 +81,13 @@ const Post: React.FC<PostProps> = (props) => {
       <Text>{data.text}</Text>
       <Actions>
         <div>
-          <Button label="Add comment" icon={<InfoIcon />}>
+          <Button label="Add comment" icon={<CommentIcon />}>
             {data.comments.size} comments
           </Button>
         </div>
         <div>
-          <Button iconOnly label="upvote" icon={<InfoIcon />} />
-          <Button iconOnly label="downvote" icon={<InfoIcon />} />
+          <Button iconOnly label="upvote" icon={<UpvoteIcon />} />
+          <Button iconOnly label="downvote" icon={<DownvoteIcon />} />
         </div>
       </Actions>
     </Container>

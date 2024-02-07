@@ -2,8 +2,9 @@ import * as React from 'react';
 import { useParams } from 'react-router-dom';
 import { css } from '@emotion/react';
 import { Person, Username, useFriends, usePerson, usePosts } from '../../state';
-import { Feed, UserLink } from '../../ui/components';
+import { Button, Feed, UserLink } from '../../ui/components';
 import { heading, text } from '../../ui/emotion';
+import { AddFriendIcon } from '../../ui/icons';
 
 /**
  * Props for the ProfileView component.
@@ -72,7 +73,14 @@ const PersonAbout: React.FC<{ person: Person }> = (props) => {
           ${heading.lg};
         `}
       >
-        {person.givenName} {person.familyName}
+        <span
+          css={css`
+            margin-right: 1rem;
+          `}
+        >
+          {person.givenName} {person.familyName}
+        </span>
+        <Button label="Add friend" icon={<AddFriendIcon />} />
       </h1>
 
       <div>

@@ -17,6 +17,8 @@ export interface ButtonProps
 /**
  * Basic button component.
  *
+ * @todo Fix messy styling in the span.
+ *
  * @param props
  * @returns
  */
@@ -43,7 +45,20 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         `}
       >
         {icon}
-        {!iconOnly && <span>{children}</span>}
+        {!iconOnly && (
+          <span
+            css={css`
+              margin-left: 0.5em;
+              line-height: 0.85em;
+              margin-top: 0.15em;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            `}
+          >
+            {children}
+          </span>
+        )}
       </button>
     );
   }

@@ -1,31 +1,57 @@
-import { faker } from '@faker-js/faker';
-import { Person, Username } from '../types';
+import { Content, Person, Username } from '../types';
 import people from './person.json';
+import allContent from './content.json';
 
 export type JsonPerson = Omit<
   Person,
   'joinDate' | 'content' | 'votes' | 'languages' | 'birthDate' | 'friends'
 > & {
+  joinDate: string;
   birthDate?: string;
   friends?: Username[];
   languages?: string[];
 };
 
+export type JsonContent = Pick<Content, 'text' | 'username' | 'id'> & {
+  dateCreated: string;
+};
+
 export function toPerson(person: JsonPerson): Person {
-  const { birthDate, friends = [], languages = [], ...other } = person;
-  const joinDate = faker.date.between({ from: '2010-01-01', to: Date.now() });
+  const {
+    birthDate,
+    joinDate,
+    friends = [],
+    languages = [],
+    ...other
+  } = person;
 
   return {
     ...other,
     birthDate: birthDate ? new Date(birthDate) : undefined,
     friends: new Set(friends),
     languages: new Set(languages),
-    joinDate,
+    joinDate: new Date(joinDate),
     content: new Set(),
     votes: new Set(),
   };
 }
 
+export function toContent(content: JsonContent): Content {
+  const { dateCreated, ...other } = content;
+
+  return {
+    ...other,
+    dateCreated: new Date(dateCreated),
+    upvotes: new Set(),
+    downvotes: new Set(),
+    comments: new Set(),
+  };
+}
+
 export function getJsonPersonData(): JsonPerson[] {
   return people as JsonPerson[];
+}
+
+export function getJsonContentData(): JsonContent[] {
+  return allContent as JsonContent[];
 }

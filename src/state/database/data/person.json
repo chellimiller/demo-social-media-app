@@ -1,12 +1,12 @@
 [
   {
     "username": "examplehuman",
-    "givenName": "User",
-    "familyName": "Example",
+    "joinDate": "2013-04-13",
+    "givenName": "Robin",
+    "familyName": "Smith",
     "about": "Example of a signed-in user",
     "occupation": "Something Important",
     "hobbies": [
-      "Coding",
       "Burning alive during the summer",
       "Avoiding bark scorpion stings",
       "Poking Gila monsters"
@@ -25,6 +25,7 @@
   },
   {
     "username": "coffeelover23",
+    "joinDate": "2017-03-12",
     "givenName": "Emma",
     "familyName": "Jones",
     "about": "Marketing professional with a passion for exploring new coffee shops and discovering unique blends. Enjoys traveling, reading, and spending time in nature.",
@@ -47,6 +48,7 @@
   },
   {
     "username": "culinary_mastermind",
+    "joinDate": "2023-07-29",
     "givenName": "Luis",
     "familyName": "Garcia",
     "about": "Chef and food enthusiast who loves experimenting with flavors from around the world. Enjoys photography, traveling, and exploring local markets.",
@@ -72,6 +74,7 @@
   },
   {
     "username": "graphicalexplorer",
+    "joinDate": "2020-06-21",
     "givenName": "Anna",
     "familyName": "Andersen",
     "about": "Graphic designer fascinated by cultural aesthetics and inspired by travels. Enjoys outdoor activities, painting, and trying new coffee blends.",
@@ -96,6 +99,7 @@
   },
   {
     "username": "techdemon",
+    "joinDate": "2020-06-20",
     "givenName": "Akira",
     "familyName": "Tanaka",
     "about": "Software engineer with a passion for building innovative solutions. Enjoys gaming, coding, and exploring the latest tech trends.",
@@ -122,6 +126,7 @@
   },
   {
     "username": "fashionista243",
+    "joinDate": "2021-11-20",
     "givenName": "Sophie",
     "familyName": "Dubois",
     "about": "Fashion designer inspired by diverse cultural influences and global trends. Enjoys traveling, sketching, and attending art exhibitions.",
@@ -147,6 +152,7 @@
   },
   {
     "username": "monstruo453",
+    "joinDate": "2019-12-01",
     "givenName": "Mateo",
     "familyName": "Rodriguez",
     "about": "Fitness enthusiast passionate about outdoor adventures and leading an active lifestyle. Enjoys hiking, rock climbing, and exploring new trails.",
@@ -171,6 +177,7 @@
   },
   {
     "username": "capturing.moments",
+    "joinDate": "2010-01-05",
     "givenName": "Elena",
     "familyName": "Ivanova",
     "about": "Freelance photographer capturing the beauty of nature and urban landscapes. Enjoys hiking, coffee tasting, and spontaneous road trips.",
@@ -196,6 +203,7 @@
   },
   {
     "username": "codeguru",
+    "joinDate": "2010-03-04",
     "givenName": "Eliza",
     "familyName": "Murphy",
     "about": "Software developer with a knack for problem-solving and creating elegant solutions. Enjoys coding, music, and exploring new coffee blends.",
@@ -220,6 +228,7 @@
   },
   {
     "username": "yoga.life",
+    "joinDate": "2014-02-12",
     "givenName": "Maria",
     "familyName": "Gonzalez",
     "about": "Yoga instructor passionate about promoting mindfulness and holistic well-being. Enjoys hiking, meditation, and spending time with her cat.",
@@ -243,6 +252,7 @@
   },
   {
     "username": "fußballstar",
+    "joinDate": "2015-02-01",
     "givenName": "Thomas",
     "familyName": "Müller",
     "about": "Professional soccer player dedicated to honing skills and inspiring young athletes. Enjoys sports, traveling, and exploring different cuisines.",

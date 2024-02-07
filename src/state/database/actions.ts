@@ -128,10 +128,11 @@ export async function createContent(
     'id' | 'dateCreated' | 'dateModified' | 'comments' | 'upvotes' | 'downvotes'
   >
 ): Promise<ContentId> {
-  const { creator, ...other } = content;
+  const { username, ...other } = content;
 
-  const person = await getPerson(creator);
-  if (!person) throw new Error(`Cannot find person with username "${creator}"`);
+  const person = await getPerson(username);
+  if (!person)
+    throw new Error(`Cannot find person with username "${username}"`);
 
   const comments = new Set<ContentId>();
   const upvotes = new Set<Username>();
@@ -139,10 +140,10 @@ export async function createContent(
   const dateCreated = new Date();
 
   // Not ideal, but it works for this mock app use case.
-  const id = `${creator}-${dateCreated.getTime()}` as ContentId;
+  const id = `${username}-${dateCreated.getTime()}` as ContentId;
 
   await database.content.put(
-    { ...other, creator, id, upvotes, downvotes, dateCreated, comments },
+    { ...other, username, id, upvotes, downvotes, dateCreated, comments },
     id
   );
 

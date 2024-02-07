@@ -1,7 +1,14 @@
 /* eslint-disable no-console */
 import Dexie, { Table } from 'dexie';
 import { Content, ContentId, Person, Username } from './types';
-import { JsonPerson, getJsonPersonData, toPerson } from './data/load';
+import {
+  JsonContent,
+  JsonPerson,
+  getJsonContentData,
+  getJsonPersonData,
+  toContent,
+  toPerson,
+} from './data/load';
 
 class DexieDatabase extends Dexie {
   person!: Table<Person, Username>;
@@ -31,11 +38,33 @@ async function initializePeople() {
   return people.filter((person) => !!person);
 }
 
+async function initializeContent(content: JsonContent) {
+  const { id } = content;
+  const existing = await database.person.get(id);
+  if (existing) return false;
+  return database.content.add(toContent(content), id);
+}
+
+async function initializeAllContent() {
+  const allContent = await Promise.all(
+    getJsonContentData().map(initializeContent)
+  );
+  return allContent.filter((content) => !!content);
+}
+
 initializePeople().then(
   (people) => {
     if (people.length) console.log(`Initialized: ${people.join(', ')}`);
   },
   (error) => console.error('Error while initializing people', error)
+);
+
+initializeAllContent().then(
+  (allContent) => {
+    if (allContent.length)
+      console.log(`Initialized: ${allContent.length} items`);
+  },
+  (error) => console.error('Error while initializing content', error)
 );
 
 export default database;

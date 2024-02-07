@@ -51,7 +51,7 @@ export type Content = {
   dateCreated: Date;
   /** Comments on this work, typically from users. */
   comments: Set<ContentId>;
-  creator: Username;
+  username: Username;
   text: string;
   /** A work such as an image, video, or audio clip shared as part of this posting. */
   sharedContent?: ContentId;

@@ -3,7 +3,11 @@ import styled from '@emotion/styled';
 import { Routes, Route, Navigate, Link } from 'react-router-dom';
 import clsx from 'clsx';
 import { text, button } from './ui/emotion';
-import { toggleThemeModeAction, useThemeMode } from './state';
+import {
+  toggleThemeModeAction,
+  useCurrentUsername,
+  useThemeMode,
+} from './state';
 import { Button, Header, Main } from './ui/components';
 import { DarkModeIcon, GithubIcon, LightModeIcon, UserIcon } from './ui/icons';
 import { FeedView, ProfileView } from './views';
@@ -32,6 +36,7 @@ const NavLink = styled.a`
 
 function App(): React.ReactElement | null {
   const mode = useThemeMode();
+  const username = useCurrentUsername();
 
   React.useEffect(() => {
     document.body.className = clsx({
@@ -69,7 +74,8 @@ function App(): React.ReactElement | null {
             <Route index element={<FeedView />} />
           </Route>
           <Route path="/profile">
-            <Route index element={<ProfileView />} />
+            <Route index element={<Navigate to={username ?? ''} />} />
+            <Route path=":username" element={<ProfileView />} />
           </Route>
         </Routes>
       </Main>

@@ -1,0 +1,268 @@
+[
+  {
+    "username": "examplehuman",
+    "givenName": "User",
+    "familyName": "Example",
+    "about": "Example of a signed-in user",
+    "occupation": "Something Important",
+    "hobbies": [
+      "Coding",
+      "Burning alive during the summer",
+      "Avoiding bark scorpion stings",
+      "Poking Gila monsters"
+    ],
+    "languages": [
+      "English"
+    ],
+    "location": {
+      "city": "Phoenix",
+      "country": "United States"
+    },
+    "friends": [
+      "fußballstar",
+      "codeguru"
+    ]
+  },
+  {
+    "username": "coffeelover23",
+    "givenName": "Emma",
+    "familyName": "Jones",
+    "about": "Marketing professional with a passion for exploring new coffee shops and discovering unique blends. Enjoys traveling, reading, and spending time in nature.",
+    "occupation": "Marketing Manager",
+    "hobbies": [
+      "Exploring coffee shops",
+      "Traveling",
+      "Reading"
+    ],
+    "languages": [
+      "English"
+    ],
+    "location": {
+      "city": "London",
+      "country": "United Kingdom"
+    },
+    "friends": [
+      "culinary_mastermind"
+    ]
+  },
+  {
+    "username": "culinary_mastermind",
+    "givenName": "Luis",
+    "familyName": "Garcia",
+    "about": "Chef and food enthusiast who loves experimenting with flavors from around the world. Enjoys photography, traveling, and exploring local markets.",
+    "occupation": "Chef",
+    "hobbies": [
+      "Cooking",
+      "Photography",
+      "Traveling"
+    ],
+    "languages": [
+      "Spanish",
+      "English"
+    ],
+    "location": {
+      "city": "Barcelona",
+      "country": "Spain"
+    },
+    "friends": [
+      "coffeelover23",
+      "graphicalexplorer",
+      "techdemon"
+    ]
+  },
+  {
+    "username": "graphicalexplorer",
+    "givenName": "Anna",
+    "familyName": "Andersen",
+    "about": "Graphic designer fascinated by cultural aesthetics and inspired by travels. Enjoys outdoor activities, painting, and trying new coffee blends.",
+    "occupation": "Graphic Designer",
+    "hobbies": [
+      "Outdoor activities",
+      "Painting",
+      "Coffee tasting"
+    ],
+    "languages": [
+      "Danish",
+      "English"
+    ],
+    "location": {
+      "city": "Copenhagen",
+      "country": "Denmark"
+    },
+    "friends": [
+      "culinary_mastermind",
+      "techdemon"
+    ]
+  },
+  {
+    "username": "techdemon",
+    "givenName": "Akira",
+    "familyName": "Tanaka",
+    "about": "Software engineer with a passion for building innovative solutions. Enjoys gaming, coding, and exploring the latest tech trends.",
+    "occupation": "Software Engineer",
+    "hobbies": [
+      "Gaming",
+      "Coding",
+      "Tech exploration"
+    ],
+    "languages": [
+      "Japanese",
+      "English"
+    ],
+    "location": {
+      "city": "Tokyo",
+      "country": "Japan"
+    },
+    "friends": [
+      "culinary_mastermind",
+      "graphicalexplorer",
+      "fashionista243",
+      "codeguru"
+    ]
+  },
+  {
+    "username": "fashionista243",
+    "givenName": "Sophie",
+    "familyName": "Dubois",
+    "about": "Fashion designer inspired by diverse cultural influences and global trends. Enjoys traveling, sketching, and attending art exhibitions.",
+    "occupation": "Fashion Designer",
+    "hobbies": [
+      "Traveling",
+      "Sketching",
+      "Art exhibitions"
+    ],
+    "languages": [
+      "French",
+      "English"
+    ],
+    "location": {
+      "city": "Paris",
+      "country": "France"
+    },
+    "friends": [
+      "techdemon",
+      "monstruo453",
+      "capturing.moments"
+    ]
+  },
+  {
+    "username": "monstruo453",
+    "givenName": "Mateo",
+    "familyName": "Rodriguez",
+    "about": "Fitness enthusiast passionate about outdoor adventures and leading an active lifestyle. Enjoys hiking, rock climbing, and exploring new trails.",
+    "occupation": "Personal Trainer",
+    "hobbies": [
+      "Hiking",
+      "Rock climbing",
+      "Exploring trails"
+    ],
+    "languages": [
+      "Spanish",
+      "English"
+    ],
+    "location": {
+      "city": "Buenos Aires",
+      "country": "Argentina"
+    },
+    "friends": [
+      "fashionista243",
+      "fußballstar"
+    ]
+  },
+  {
+    "username": "capturing.moments",
+    "givenName": "Elena",
+    "familyName": "Ivanova",
+    "about": "Freelance photographer capturing the beauty of nature and urban landscapes. Enjoys hiking, coffee tasting, and spontaneous road trips.",
+    "occupation": "Photographer",
+    "hobbies": [
+      "Hiking",
+      "Coffee tasting",
+      "Road trips"
+    ],
+    "languages": [
+      "Russian",
+      "English"
+    ],
+    "location": {
+      "city": "Moscow",
+      "country": "Russia"
+    },
+    "friends": [
+      "codeguru",
+      "fashionista243",
+      "yoga.life"
+    ]
+  },
+  {
+    "username": "codeguru",
+    "givenName": "Eliza",
+    "familyName": "Murphy",
+    "about": "Software developer with a knack for problem-solving and creating elegant solutions. Enjoys coding, music, and exploring new coffee blends.",
+    "occupation": "Software Developer",
+    "hobbies": [
+      "Coding",
+      "Music",
+      "Coffee tasting"
+    ],
+    "languages": [
+      "English"
+    ],
+    "location": {
+      "city": "San Francisco",
+      "country": "United States"
+    },
+    "friends": [
+      "techdemon",
+      "capturing.moments",
+      "examplehuman"
+    ]
+  },
+  {
+    "username": "yoga.life",
+    "givenName": "Maria",
+    "familyName": "Gonzalez",
+    "about": "Yoga instructor passionate about promoting mindfulness and holistic well-being. Enjoys hiking, meditation, and spending time with her cat.",
+    "occupation": "Yoga Instructor",
+    "hobbies": [
+      "Hiking",
+      "Meditation",
+      "Cat companionship"
+    ],
+    "languages": [
+      "Spanish",
+      "English"
+    ],
+    "location": {
+      "city": "Bogotá",
+      "country": "Colombia"
+    },
+    "friends": [
+      "capturing.moments"
+    ]
+  },
+  {
+    "username": "fußballstar",
+    "givenName": "Thomas",
+    "familyName": "Müller",
+    "about": "Professional soccer player dedicated to honing skills and inspiring young athletes. Enjoys sports, traveling, and exploring different cuisines.",
+    "occupation": "Professional Soccer Player",
+    "hobbies": [
+      "Sports",
+      "Traveling",
+      "Cuisine exploration"
+    ],
+    "languages": [
+      "German",
+      "English"
+    ],
+    "location": {
+      "city": "Munich",
+      "country": "Germany"
+    },
+    "friends": [
+      "monstruo453",
+      "examplehuman"
+    ]
+  }
+]

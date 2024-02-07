@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
-import { Content } from '../../../state';
+import { css } from '@emotion/react';
+import { Content, usePerson } from '../../../state';
 import { text } from '../../emotion';
 import Button from '../Button';
 import { InfoIcon } from '../../icons';
@@ -48,7 +49,7 @@ const Actions = styled.div`
 `;
 
 /**
- * @todo Add description
+ * @todo Localization for givenName/familyName order
  *
  * @param props
  * @returns
@@ -56,12 +57,25 @@ const Actions = styled.div`
 const Post: React.FC<PostProps> = (props) => {
   const { data, ...forwardedProps } = props;
 
+  const person = usePerson(data?.username);
+
   if (!data) return null;
 
   return (
     <Container {...forwardedProps}>
       <Header>
-        <UserLink username={data.username} />
+        <span>
+          {person && (
+            <span
+              css={css`
+                margin-right: 1rem;
+              `}
+            >
+              {person.givenName} {person.familyName}
+            </span>
+          )}
+          <UserLink username={data.username} />
+        </span>
         <span>{data.dateCreated.toDateString()}</span>
       </Header>
       <Text>{data.text}</Text>

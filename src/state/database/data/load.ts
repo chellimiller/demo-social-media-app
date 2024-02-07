@@ -31,8 +31,6 @@ export function toPerson(person: JsonPerson): Person {
     friends: new Set(friends),
     languages: new Set(languages),
     joinDate: new Date(joinDate),
-    content: new Set(),
-    votes: new Set(),
   };
 }
 

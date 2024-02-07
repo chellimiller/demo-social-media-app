@@ -36,9 +36,6 @@ export type Person = {
     city?: string;
     country: string;
   };
-  /** Tracks interactions with both upvotes and downvotes */
-  votes: Set<ContentId>;
-  content: Set<ContentId>;
 };
 
 /**

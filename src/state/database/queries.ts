@@ -22,3 +22,24 @@ export async function getFriends(username: Username): Promise<Person[]> {
 export function getContent(id: ContentId): Promise<Content | undefined> {
   return database.content.get(id);
 }
+
+export async function getPosts(username: Username): Promise<Content[]> {
+  const data = await database.content
+    .filter((content) => content.username === username)
+    .toArray();
+
+  return data.sort((a, b) => b.dateCreated.getTime() - a.dateCreated.getTime());
+}
+
+export async function getFeed(username: Username): Promise<Content[]> {
+  const person = await getPerson(username);
+  if (!person) return [];
+
+  const data = await database.content
+    .filter((content) => person.friends.has(content.username))
+    .toArray();
+
+  console.log(data);
+
+  return data.sort((a, b) => b.dateCreated.getTime() - a.dateCreated.getTime());
+}

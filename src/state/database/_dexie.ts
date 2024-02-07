@@ -40,7 +40,7 @@ async function initializePeople() {
 
 async function initializeContent(content: JsonContent) {
   const { id } = content;
-  const existing = await database.person.get(id);
+  const existing = await database.content.get(id);
   if (existing) return false;
   return database.content.add(toContent(content), id);
 }
@@ -55,16 +55,17 @@ async function initializeAllContent() {
 initializePeople().then(
   (people) => {
     if (people.length) console.log(`Initialized: ${people.join(', ')}`);
+
+    initializeAllContent().then(
+      (allContent) => {
+        if (allContent.length) {
+          console.log(`Initialized: ${allContent.length} items`);
+        }
+      },
+      (error) => console.error('Error while initializing content', error)
+    );
   },
   (error) => console.error('Error while initializing people', error)
-);
-
-initializeAllContent().then(
-  (allContent) => {
-    if (allContent.length)
-      console.log(`Initialized: ${allContent.length} items`);
-  },
-  (error) => console.error('Error while initializing content', error)
 );
 
 export default database;

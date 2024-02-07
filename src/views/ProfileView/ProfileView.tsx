@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Username, useFriends, usePerson, usePosts } from '../../state';
-import { Post } from '../../ui/components';
+import { Feed } from '../../ui/components';
 
 /**
  * Props for the ProfileView component.
@@ -29,23 +29,11 @@ const PersonFriends: React.FC<{ username: Username }> = (props) => {
   );
 };
 
-/**
- *
- * @todo Localization for givenName/familyName order
- */
 const PersonActivity: React.FC<{ username: Username }> = (props) => {
   const { username } = props;
   const posts = usePosts(username);
 
-  return (
-    <ul>
-      {Array.from(posts).map((post) => (
-        <li key={post.id}>
-          <Post data={post} />
-        </li>
-      ))}
-    </ul>
-  );
+  return <Feed data={posts} />;
 };
 
 /**

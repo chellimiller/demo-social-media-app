@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Username, useCurrentUsername, useFeed } from '../../state';
-import { Post } from '../../ui/components';
+import { Feed } from '../../ui/components';
 
 /**
  * Props for the FeedView component.
@@ -9,21 +9,13 @@ export type FeedViewProps = React.HTMLAttributes<HTMLDivElement>;
 
 /**
  *
- * @todo Localization for givenName/familyName order
+ * @todo Virtualization
  */
 const PersonFeed: React.FC<{ username: Username }> = (props) => {
   const { username } = props;
   const posts = useFeed(username);
 
-  return (
-    <ul>
-      {Array.from(posts).map((post) => (
-        <li key={post.id}>
-          <Post data={post} />
-        </li>
-      ))}
-    </ul>
-  );
+  return <Feed data={posts} />;
 };
 
 /**

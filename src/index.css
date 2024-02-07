@@ -124,6 +124,9 @@
   --scrollbar--track-color: var(--color--neutral-90);
   --scrollbar--track-color--hover: var(--scrollbar--track-color);
   --scrollbar--track-color--active: var(--color--neutral-85);
+
+  --link--color: #1684b3;
+  --link--hover: #18607e;
 }
 
 .dark-mode {
@@ -167,6 +170,9 @@
   --scrollbar--track-color: var(--color--neutral-30);
   --scrollbar--track-color--hover: var(--color--neutral-35);
   --scrollbar--track-color--active: var(--color--neutral-25);
+
+  --link--color: #5bc0eb;
+  --link--hover: #1684b3;
 }
 
 * {

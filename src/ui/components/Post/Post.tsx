@@ -1,11 +1,10 @@
 import * as React from 'react';
-// eslint-disable-next-line no-restricted-imports
-import { Link } from 'react-router-dom';
 import styled from '@emotion/styled';
 import { Content } from '../../../state';
 import { text } from '../../emotion';
 import Button from '../Button';
 import { InfoIcon } from '../../icons';
+import UserLink from '../UserLink';
 
 /**
  * Props for the Post
@@ -62,9 +61,7 @@ const Post: React.FC<PostProps> = (props) => {
   return (
     <Container {...forwardedProps}>
       <Header>
-        <span>
-          <Link to={`/profile/${data.username}`}>@{data.username}</Link>
-        </span>
+        <UserLink username={data.username} />
         <span>{data.dateCreated.toDateString()}</span>
       </Header>
       <Text>{data.text}</Text>

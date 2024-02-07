@@ -12,3 +12,5 @@ export * from './Main';
 export { default as Main } from './Main';
 export * from './Post';
 export { default as Post } from './Post';
+export * from './UserLink';
+export { default as UserLink } from './UserLink';

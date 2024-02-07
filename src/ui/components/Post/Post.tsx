@@ -4,7 +4,7 @@ import { css } from '@emotion/react';
 import { Content, usePerson } from '../../../state';
 import { text } from '../../emotion';
 import Button from '../Button';
-import { CommentIcon, DownvoteIcon, InfoIcon, UpvoteIcon } from '../../icons';
+import { CommentIcon, DownvoteIcon, UpvoteIcon } from '../../icons';
 import UserLink from '../UserLink';
 
 /**
